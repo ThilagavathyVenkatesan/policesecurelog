@@ -68,21 +68,12 @@ python data_insert.py
 bash
 streamlit run securepolicelog.py
 ________________________________________
-📌 Sample Queries
-•	Top 10 vehicles in drug-related stops
-•	Arrest rates by age and gender
-•	Time-of-day analysis for stops
-•	Violation types leading to searches
-•	Country-wise stop breakdown
+![Screenshot (24)](https://github.com/user-attachments/assets/c5204d05-fe98-4f47-94ee-677e970bd36a)
 ________________________________________
 🤖 Prediction Example
 “A 27-year-old male driver was stopped for Speeding at 10:35 PM. No search was conducted and the stop was not drug-related. The likely outcome is a Warning.”
 ________________________________________
-🔒 Future Scope
-•	Admin/Officer login with restricted access
-•	Automatic flagged vehicle detection
-•	Real-time alerts and notifications
-•	Export reports in PDF
+![f](https://github.com/user-attachments/assets/bda26b89-fffc-4dfc-9d98-5c8c89ef0780)
 ________________________________________
 🧠 Credits
 Built with ❤️ using Streamlit, SQLAlchemy, and MySQL.
