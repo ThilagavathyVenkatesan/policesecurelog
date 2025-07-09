@@ -27,15 +27,9 @@ ________________________________________
 ![StreamlitOutput(6)](https://github.com/user-attachments/assets/577103de-4adf-46bb-93ac-c51bf02309ae)
 ![StreamlitOutput(7)](https://github.com/user-attachments/assets/f4c83e40-4e77-454f-9bfd-ddab5ce4b6ad)
 ________________________________________
-📂 Folder Structure
-bash
-
-├── securepolicelog.py       		  # Main Streamlit App
-├── clean_data.py 	      		    # Script to clean data
-├── data_insert.py           		  # Script to load Cleaned CSV to MySQL
-├── cleaned_traffic_data.csv      # Cleaned data
-└── README.md               		  # Project documentation
-________________________________________
+ Folder Structure
+![Folder Structure](https://github.com/user-attachments/assets/4864eb9f-d274-451e-9ce8-0b8f9290c4af)
+______________________________________
 ⚙️ How to Run
 1. Clone this repo
 bash
