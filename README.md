@@ -121,7 +121,7 @@ streamlit run securepolicelog.py
 
 ---
 
-## 🤖 Prediction Example
+## 📝 Prediction Example
 
 > “A 27-year-old male driver was stopped for **Speeding** at **10:35 PM**.
 > No search was conducted and the stop was not drug-related.
@@ -138,7 +138,7 @@ streamlit run securepolicelog.py
 
 ---
 
-## 🧠 Credits
+## ❇️ Credits
 
 Built with ❤️ using [Streamlit](https://streamlit.io/), [SQLAlchemy](https://www.sqlalchemy.org/), and [MySQL](https://www.mysql.com/)
 
