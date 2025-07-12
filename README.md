@@ -41,7 +41,7 @@ Built using **Python**, **MySQL**, and **Streamlit**, it provides interactive da
 ## 📂 Folder Structure
 
 ```
-securecheck/
+securecheck
 │
 ├── securepolicelog.py           # Main Streamlit App
 ├── clean_data.py                # Script to clean and preprocess raw data
