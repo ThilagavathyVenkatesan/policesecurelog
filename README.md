@@ -1,62 +1,85 @@
-🚨 SecureCheck: Police Check Post Digital Ledger
-SecureCheck is a digital record management system designed for law enforcement agencies to track, analyze, and manage traffic stop logs. Built with Python, MySQL, and Streamlit, it enables interactive dashboards, real-time data visualization, and intelligent predictions to support decision-making and enhance transparency.
-________________________________________
+# 🚨 SecureCheck: Police Check Post Digital Ledger
 
-## 🚀 Features
+**SecureCheck** is a digital record management system designed for law enforcement agencies to **track**, **analyze**, and **manage traffic stop logs**.
+Built using **Python**, **MySQL**, and **Streamlit**, it provides interactive dashboards, real-time data visualization, and intelligent predictions to enhance decision-making and transparency.
 
-- 📋 Real-time police stop record monitoring
-- 📊 Dashboard with analytics (arrests, violations, search rates)
-- 🔐 Role-based access (planned)
-- 🧠 Predict violation/outcome from form data
-- 🗂 SQL queries (medium & complex) integrated
+---
 
-## 🖼️ Dashboard Preview
+## 🔧 Features
 
-![Screenshot](screens/dashboard.png)
+* ✅ Streamlit-based interactive dashboard
+* 🔍 Query interface for **medium & complex SQL analytics**
+* 📈 Charts and metrics (e.g., arrest rates, drug-related stops)
+* 📊 Visual insights by **gender**, **violation type**, and **region**
+* 🧠 Prediction module for stop outcome and likely violation based on driver input
+* 🔄 Data caching using `@st.cache_data` for faster access
 
-## 📦 Installation
+---
+
+## 📁 Tech Stack
+
+| Layer    | Technology                         |
+| -------- | ---------------------------------- |
+| Frontend | Streamlit                          |
+| Backend  | Python (Pandas, Plotly, Streamlit) |
+| Database | MySQL                              |
+| ORM      | SQLAlchemy + PyMySQL               |
+
+---
+
+## 📸 Screenshots
+
+<img width="1366" height="768" alt="Streamlit Output(1)" src="https://github.com/user-attachments/assets/23011077-a954-4c46-8e39-8d9d2c29b981" />
+<img width="1366" height="768" alt="StreamlitOutput(2)" src="https://github.com/user-attachments/assets/272cf351-5273-45ad-9f3f-8ab18b272742" />
+<img width="1366" height="768" alt="StreamlitOutput(3)" src="https://github.com/user-attachments/assets/1adab8b5-49c3-4c2d-a7db-79bafc687583" />
+<img width="1366" height="768" alt="StreamlitOutput(4)" src="https://github.com/user-attachments/assets/92862569-e952-426a-8fd8-2c2a1f3e6274" />
+<img width="1366" height="768" alt="StreamlitOutput(5)" src="https://github.com/user-attachments/assets/1d9072d3-7200-4db3-81b6-80db0ef8b77b" />
+<img width="1366" height="768" alt="StreamlitOutput(6)" src="https://github.com/user-attachments/assets/58a14a08-292a-47df-a2d6-2c42825fe2c8" />
+<img width="1366" height="768" alt="StreamlitOutput(7)" src="https://github.com/user-attachments/assets/f59895c2-d7ea-4318-a982-07a93d7cffc2" />
+---
+
+## 📂 Folder Structure
+
+```
+securecheck/
+│
+├── securepolicelog.py           # Main Streamlit App
+├── clean_data.py                # Script to clean and preprocess raw data
+├── data_insert.py               # Script to load cleaned data into MySQL
+├── cleaned_traffic_data.csv     # Cleaned CSV data file
+├── requirements.txt             # Python dependencies
+└── README.md                    # Project documentation
+```
+
+---
+
+## ⚙️ How to Run
+
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourname/SecureCheck.git
-cd SecureCheck
-pip install -r requirements.txt
-streamlit run dashboard.py
-
-________________________________________
-📁 Tech Stack
-| Layer           | Technology                         |
-| --------------- | ---------------------------------- |
-| Frontend        | [Streamlit](https://streamlit.io/) |
-| Backend (Logic) | Python (Pandas, Plotly)            |
-| Database        | MySQL with SQLAlchemy              |
-| ORM             | SQLAlchemy + PyMySQL               |
-
-________________________________________
-📸 Screenshots
-![Streamlit Output(1)](https://github.com/user-attachments/assets/6928f8be-cff1-40e8-bce4-0be565fc4d7e)
-![StreamlitOutput(2)](https://github.com/user-attachments/assets/446b051e-2f34-4e9e-8229-b0b32ec1c216)
-![StreamlitOutput(3)](https://github.com/user-attachments/assets/096f94d9-b95b-4cbb-9310-64e08f1911c4)
-![StreamlitOutput(4)](https://github.com/user-attachments/assets/060112de-7d61-49af-96a6-2d2d3d331ffb)
-![StreamlitOutput(5)](https://github.com/user-attachments/assets/2ec07d7a-cf2b-44ae-86cb-dd26499d0982)
-![StreamlitOutput(6)](https://github.com/user-attachments/assets/577103de-4adf-46bb-93ac-c51bf02309ae)
-![StreamlitOutput(7)](https://github.com/user-attachments/assets/f4c83e40-4e77-454f-9bfd-ddab5ce4b6ad)
-________________________________________
-![Folder Structure](https://github.com/user-attachments/assets/4864eb9f-d274-451e-9ce8-0b8f9290c4af)
-______________________________________
-⚙️ How to Run
-1. Clone this repo
-bash
-git clone https://github.com/ThilagavathyVenkatesan/policeseurelog.git
+git clone https://github.com/ThilagavathyVenkatesan/policesecurelog.git
 cd policesecurelog
-2. Set up Python environment
-bash
-pip install streamlit pandas streamlit sqlalchemy pymysql plotly
-3. Set up MySQL
-•	Create a database securecheck1
-•	Run the police_logs table creation SQL (see below)
-sql
-CopyEdit
-CREATE TABLE police_logs (
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install streamlit pandas sqlalchemy pymysql plotly
+```
+
+### 3. Set Up MySQL
+
+* Create a database:
+
+```sql
+CREATE DATABASE securecheck1;
+```
+
+* Then create the `traffic_stops` table:
+
+```sql
+CREATE TABLE traffic_stops (
     id INT AUTO_INCREMENT PRIMARY KEY,
     stop_date DATE,
     stop_time TIME,
@@ -72,24 +95,52 @@ CREATE TABLE police_logs (
     violation VARCHAR(100),
     vehicle_number VARCHAR(20)
 );
-4. clean data
-bash
-python clean_data.py
-4. Load data
-bash
+```
+
+### 4. Load Data into MySQL
+
+```bash
 python data_insert.py
-5. Run the dashboard
-bash
+```
+
+### 5. Run the Streamlit Dashboard
+
+```bash
 streamlit run securepolicelog.py
-________________________________________
-![Screenshot (24)](https://github.com/user-attachments/assets/c5204d05-fe98-4f47-94ee-677e970bd36a)
-________________________________________
-🤖 Prediction Example
-“A 27-year-old male driver was stopped for Speeding at 10:35 PM. No search was conducted and the stop was not drug-related. The likely outcome is a Warning.”
-________________________________________
-![f](https://github.com/user-attachments/assets/bda26b89-fffc-4dfc-9d98-5c8c89ef0780)
-________________________________________
-🧠 Credits
-Built with ❤️ using Streamlit, SQLAlchemy, and MySQL.
-________________________________________
+```
+
+---
+
+## 📌 Sample SQL Queries (Medium & Complex)
+
+* **Top 10 vehicles in drug-related stops**
+* **Arrest rates by age and gender**
+* **Time-of-day analysis for stops**
+* **Violation types leading to searches**
+* **Country-wise stop breakdown**
+
+---
+
+## 🤖 Prediction Example
+
+> “A 27-year-old male driver was stopped for **Speeding** at **10:35 PM**.
+> No search was conducted and the stop was not drug-related.
+> **The likely outcome is a Warning.**”
+
+---
+
+## 🔒 Future Scope
+
+* 🔐 Admin/Officer **role-based login**
+* 🚨 Automatic **flagged vehicle detection**
+* 📡 Real-time **alerts and notifications**
+* 🧾 Export reports as **PDF**
+
+---
+
+## 🧠 Credits
+
+Built with ❤️ using [Streamlit](https://streamlit.io/), [SQLAlchemy](https://www.sqlalchemy.org/), and [MySQL](https://www.mysql.com/)
+
+---
 
