@@ -65,7 +65,7 @@ cd policesecurelog
 ### 2. Install Dependencies
 
 ```bash
-pip install streamlit pandas sqlalchemy pymysql plotly
+pip install -r requirements.txt
 ```
 
 ### 3. Set Up MySQL
