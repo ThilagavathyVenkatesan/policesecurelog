@@ -1,13 +1,27 @@
 🚨 SecureCheck: Police Check Post Digital Ledger
 SecureCheck is a digital record management system designed for law enforcement agencies to track, analyze, and manage traffic stop logs. Built with Python, MySQL, and Streamlit, it enables interactive dashboards, real-time data visualization, and intelligent predictions to support decision-making and enhance transparency.
 ________________________________________
-#🔧 Features#
-•	✅ Streamlit-based interactive dashboard
-•	🔍 Query interface for medium & complex SQL analytics
-•	📈 Charts and metrics for key statistics (e.g., arrest rates, drug-related stops)
-•	📊 Visual insights by gender, violation type, and region
-•	🧠 Prediction module for stop outcome and likely violation based on driver input
-•	🔄 Data caching for fast access
+
+## 🚀 Features
+
+- 📋 Real-time police stop record monitoring
+- 📊 Dashboard with analytics (arrests, violations, search rates)
+- 🔐 Role-based access (planned)
+- 🧠 Predict violation/outcome from form data
+- 🗂 SQL queries (medium & complex) integrated
+
+## 🖼️ Dashboard Preview
+
+![Screenshot](screens/dashboard.png)
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/yourname/SecureCheck.git
+cd SecureCheck
+pip install -r requirements.txt
+streamlit run dashboard.py
+
 ________________________________________
 📁 Tech Stack
 | Layer           | Technology                         |
