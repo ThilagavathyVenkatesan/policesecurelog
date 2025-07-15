@@ -11,7 +11,7 @@ Built using **Python**, **MySQL**, and **Streamlit**, it provides interactive da
 * 🔍 Query interface for **medium & complex SQL analytics**
 * 📈 Charts and metrics (e.g., arrest rates, drug-related stops)
 * 📊 Visual insights by **gender**, **violation type**, and **region**
-* 🧠 Prediction module for stop outcome and likely violation based on driver input
+* 📝 Prediction module for stop outcome and likely violation based on driver input
 * 🔄 Data caching using `@st.cache_data` for faster access
 
 ---
