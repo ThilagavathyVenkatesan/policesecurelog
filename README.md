@@ -10,7 +10,7 @@ Built using **Python**, **MySQL**, and **Streamlit**, it provides interactive da
 * ✅ Streamlit-based interactive dashboard
 * 🔍 Query interface for **medium & complex SQL analytics**
 * 📈 Charts and metrics (e.g., arrest rates, drug-related stops)
-* 📊 Visual insights by **gender**, **violation type**, and **region**
+* 📊 Visual insights by **gender** and **violation type**
 * 📝 Prediction module for stop outcome and likely violation based on driver input
 * 🔄 Data caching using `@st.cache_data` for faster access
 
