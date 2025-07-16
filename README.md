@@ -134,7 +134,7 @@ streamlit run securepolicelog.py
 * 🔐 Admin/Officer **role-based login**
 * 🚨 Automatic **flagged vehicle detection**
 * 📡 Real-time **alerts and notifications**
-* 🧾 Export reports as **PDF**
+* 🗒️ Export reports as **PDF**
 
 ---
 
